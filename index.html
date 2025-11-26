@@ -2,55 +2,65 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <link href="/src/style.css" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite + TS</title>
+    <meta charset="UTF-8"/>
+    <link href="/src/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Vite + TS</title>
 </head>
 
 <body>
 
-  <div class="navbar bg-base-100 shadow-sm">
+<div class="navbar bg-base-100 shadow-sm">
     <div class="flex-1">
-      <a class="btn btn-ghost text-xl">SkillHub</a>
+        <a class="btn btn-ghost text-xl">SkillHub</a>
     </div>
     <div class="flex gap-2">
-      <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
-      <div class="dropdown dropdown-end">
-        <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
-          <div class="w-10 rounded-full">
-            <img alt="Tailwind CSS Navbar component"
-              src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
-          </div>
-        </div>
+        <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto"/>
+        <div class="dropdown dropdown-end">
+            <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+                <div class="w-10 rounded-full">
+                    <img alt="Tailwind CSS Navbar component"
+                         src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"/>
+                </div>
+            </div>
 
-      </div>
+        </div>
     </div>
-  </div>
+</div>
 
-  <div x-data="$store.quizz">
+<div x-data="$store.quizz">
     <template x-for="question in questions">
-      <div class="card card-border bg-base-100 w-96">
-        <div class="card-body">
-          <h2 class="card-title" x-text="question.question"></h2>
-          <form>
-            <template x-for="answer in question.answers">
-              <div class="flex items-center gap-2">
-                <input type="radio" name="radio-1" class="radio-sm" checked="'checked" />
-                <label for="radio-1" x-text="answer"></label>
-              </div>
-            </template>
-          </form>
-          <div class="card-actions">
-            <button class="btn btn-primary btn-xs">Valider</button>
-          </div>
+        <div class="card card-border bg-base-100 w-96">
+            <div class="card-body">
+                <h2 class="card-title" x-text="question.question"></h2>
+
+                <form>
+                    <template x-for="answer in question.answers">
+                        <div class="flex items-center gap-2">
+                            <input
+                                    type="radio"
+                                    :name="'radio-' + question.id"
+                                    class="radio-sm"
+                                    :value="answer"
+                                    x-model="question.selected"
+                            />
+                            <label :for="'answer'+question.id" x-text="answer"></label>
+                        </div>
+                    </template>
+                </form>
+
+                <div class="card-actions">
+                    <button class="btn btn-primary btn-xs"
+                            @click="printAnswerSelect(question)">
+                        Valider
+                    </button>
+                </div>
+            </div>
         </div>
-      </div>
     </template>
+</div>
 
-  </div>
-
-  <script type="module" src="src/main.ts"></script>
+<script type="module" src="src/main.ts"></script>
 </body>
 
 </html>

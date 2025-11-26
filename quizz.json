@@ -1,0 +1,70 @@
+{
+  "count": 5,
+  "quizzes": [
+    {
+      "id": "cmck8wdut001phzroz9xciyho",
+      "question": "Qui a réalisé le film Titanic ?",
+      "answer": "James Cameron",
+      "categoryId": "cmck8wdgi0003hzroikw9krfe",
+      "category": "tv_cinema",
+      "difficulty": "facile",
+      "badAnswers": [
+        "Steven Spielberg",
+        "David Lynch",
+        "Christopher Nolan"
+      ]
+    },
+    {
+      "id": "cmck8wdut001shzrohzz0l96x",
+      "question": "Quelle série de film de S-F a été réalisée par les Wachowski ?",
+      "answer": "Matrix",
+      "categoryId": "cmck8wdgi0003hzroikw9krfe",
+      "category": "tv_cinema",
+      "difficulty": "facile",
+      "badAnswers": [
+        "Star Wars",
+        "Retour vers le futur",
+        "Star Trek"
+      ]
+    },
+    {
+      "id": "cmguz1h970005hzaufq8fqsrb",
+      "question": "Quelle actrice incarne Katniss Everdeen dans 'Hunger Games' ?",
+      "answer": "Jennifer Lawrence",
+      "categoryId": "cmck8wdgi0003hzroikw9krfe",
+      "category": "tv_cinema",
+      "difficulty": "facile",
+      "badAnswers": [
+        "Emma Watson",
+        "Scarlett Johansson",
+        "Kristen Stewart"
+      ]
+    },
+    {
+      "id": "cmck8wdv1002whzro4afauftv",
+      "question": "Comment s'appelle le frère de Sasuke Uchiwa ?",
+      "answer": "Itachi",
+      "categoryId": "cmck8wdgi0003hzroikw9krfe",
+      "category": "tv_cinema",
+      "difficulty": "facile",
+      "badAnswers": [
+        "Obito",
+        "Madara",
+        "Kakashi"
+      ]
+    },
+    {
+      "id": "cmck8wdv4005ahzro41luqgfd",
+      "question": "Quel est le métier d’Obélix dans les aventures d’Astérix et Obélix ?",
+      "answer": "Tailleur et livreur de menhirs",
+      "categoryId": "cmck8wdgi0003hzroikw9krfe",
+      "category": "tv_cinema",
+      "difficulty": "facile",
+      "badAnswers": [
+        "Chef de village",
+        "Chasseur de sanglier",
+        "Forgeron"
+      ]
+    }
+  ]
+}

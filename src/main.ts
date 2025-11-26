@@ -73,4 +73,17 @@ Alpine.store("quizz", {
   questions: transformedQuestions,
 });
 
+const printAnswerSelect = (question: TransformedQuestion) => {
+    const selected = question.selected
+    const answer = question.answer
+    console.log("Réponse correcte :", answer);
+    console.log("Réponse choisie :", selected);
+    if (selected === answer) {
+        console.log("Correct");
+    } else {
+        console.log("Incorrect");
+    }
+}
+(window as any).printAnswerSelect = printAnswerSelect;
+
 Alpine.start();
